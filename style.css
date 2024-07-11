@@ -1,0 +1,28 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background: #282828;
+    color: #FFFFFF;
+}
+
+.container {
+    margin: 0 auto;
+    width: 1110px;
+}
+
+header{
+    padding: 30px 0;
+}
+
+header nav ul{
+    display: flex;
+}
+
+.header__wrap div{
+    display: flex;
+    justify-content: space-between;
+}
