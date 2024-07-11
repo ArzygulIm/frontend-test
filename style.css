@@ -35,7 +35,10 @@ header nav ul {
 }
 
 header nav ul li {
-    padding: 11px 108px;
+    padding: 11px 0;
+    width: 25%;
+    display: flex;
+    justify-content: center;
     border: 1px solid #FFFFFF;
 }
 
@@ -181,6 +184,7 @@ h1::after {
     color: #282828;
     margin: 30px 0 60px;
     position: relative;
+    width: 298px;
 }
 
 .collections__text h5::after {
@@ -201,11 +205,8 @@ table {
 
 td {
     border: 1px solid black;
-    /* Граница для ячеек */
     padding: 8px;
-    /* Отступ внутри ячеек */
     text-align: left;
-    /* Выравнивание текста в ячейках */
 }
 
 table tr:first-child td {
@@ -234,30 +235,30 @@ table tr td:last-child {
 }
 
 .collections__text button {
-    font-family: 'Montserrat';
-    font-style: normal;
-    font-weight: 400;
-    font-size: 14px;
-    line-height: 150%;
-    color: #282828;
     background: #998431;
     padding: 15px 30px 15px 30px;
     border: none;
     margin-top: 30px;
+    font-family: 'Montserrat';
+    font-style: normal;
+    font-weight: 500;
+    font-size: 16px;
+    line-height: 20px;
+    text-align: center;
+    letter-spacing: 0.05em;
+    text-transform: uppercase;
+    color: #FFFFFF;
 }
 
 .collections__images {
+    max-width: 540px;
     display: grid;
     grid-template-columns: 1fr 1fr;
-    /* Две колонки */
     grid-template-rows: auto auto;
-    /* Две строки */
     grid-template-areas:
         "image1 image1"
         "image2 image3";
-    /* Определение областей для изображений */
     gap: 30px;
-    /* Расстояние между ячейками */
 }
 
 .collections__images img:first-child {
@@ -335,6 +336,8 @@ table tr td:last-child {
 }
 
 #phone_number {
+    grid-template-rows: min-content min-content;
+
     grid-area: input2;
 }
 
@@ -406,16 +409,17 @@ footer nav ul li a {
     color: #FFFFFF;
 }
 
-.footer-texts{
+.footer-texts {
     display: flex;
     align-items: stretch;
 }
 
-.footer-texts p{
+.footer-texts p {
     text-align: center;
 }
 
-.footer-texts div, .footer-texts p{
+.footer-texts div,
+.footer-texts p {
     width: 25%;
     height: 59px;
     display: flex;
@@ -424,11 +428,73 @@ footer nav ul li a {
     gap: 35px;
 }
 
-.footer-texts p:not(:last-child){
+min-content min-content .footer-texts p:not(:last-child) {
     border-right: 1px solid #FFFFFF;
 }
 
-.footer-texts div{
+.footer-texts div {
     border-right: 1px solid #FFFFFF;
-    
+
+}
+
+@media (max-width: 1200px) {
+    .container {
+        width: 90%;
+    }
+
+    .collections__text {
+        width: 48%;
+    }
+
+    .collections__images img {
+        width: 100%;
+    }
+
+    .collections__images {
+        width: 48%;
+        grid-template-rows: min-content min-content;
+    }
+}
+
+@media (max-width: 1000px) {
+    .sign-up__wrap {
+        padding: 100px 0 80px;
+    }
+
+    .sign-up__wrap h6 {
+        position: relative;
+        top: 0;
+        right: 0;
+        transform: translateX(0);
+        z-index: 10;
+        background-color: transparent;
+    }
+
+    .sign-up__wrap p {
+        position: relative;
+        z-index: 10;
+    }
+
+    .main-text__wrap p {
+        width: 90%;
+    }
+}
+
+@media (max-width: 800px) {
+    .collections__wrap {
+        flex-direction: column;
+        gap: 50px;
+    }
+
+    .collections__text {
+        width: 100%;
+    }
+
+    .collections__images{
+        width: 100%;
+    }
+
+    .collections__text h5 {
+        width: 100%;
+    }
 }
