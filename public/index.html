@@ -119,11 +119,11 @@
                         adipiscing. Pellentesque nisi, mi sit non sit sed fermentum. </p>
                     <img class="first-image" src="./images/imageGrapes.png" alt=""><img src="./images/image(1).png"
                         alt="">
-                    <form action="">
-                        <input type="text" name="" id="name" placeholder="Имя">
-                        <input type="text" name="" id="phone_number" placeholder="Телефон">
-                        <input type="text" name="" id="Adress" placeholder="Адрес">
-                        <button>записаться</button>
+                    <form action="" id="myForm">
+                        <input type="text" name="name" id="name" placeholder="Имя" required>
+                        <input type="tel" name="phone_number" id="phone_number" placeholder="Телефон" pattern="\+996\s\d{3}\s\d{3}\s\d{3}" required>
+                        <input type="text" name="adress" id="adress" placeholder="Адрес" required>
+                        <button  id="formButton">записаться</button>
                     </form>
                 </div>
             </div>
